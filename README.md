@@ -1,4 +1,4 @@
-# 🎵 CLI Audio Batch Analyzer
+# CLI Audio Batch Analyzer
 
 A lightweight, dependency-free Python CLI tool that scans a directory of audio files (WAV, MP3, FLAC, AIFF, M4A) and generates a beautifully formatted, color-coded table of their technical specifications and EBU R128 loudness metrics.
 
@@ -17,11 +17,34 @@ A lightweight, dependency-free Python CLI tool that scans a directory of audio f
    - **macOS:** `brew install ffmpeg`
    - **Linux:** `sudo apt install ffmpeg`
 3. **Download the script:**
-   Clone this repository or download `audio_analyzer.py`.
+   Clone this repository or download `audio_analyzer.py` and `audio_analyzer.cmd`.
 
 ## 🚀 Usage
 
-Run the script from your terminal. If you don't provide a path, it will analyze the current directory.
+For Windows users, an `audio_analyzer.cmd` wrapper script is provided to allow direct execution from the command line, similar to a native command.
+
+**To use `audio_analyzer` from any directory (Windows):**
+
+1.  **Locate the script directory:** `m:\Shaun Lodestar\AUDIO_ANALYZER\AUDIO_ANALYZER\`
+2.  **Add to System PATH**:
+    *   Search in Windows for "Environment Variables" and select "Edit the system environment variables."
+    *   Click "Environment Variables..."
+    *   Under "System variables," select `Path` and click "Edit..."
+    *   Click "New" and add the directory: `m:\Shaun Lodestar\AUDIO_ANALYZER\AUDIO_ANALYZER\`
+    *   Click "OK" on all windows to save.
+    *   **Restart any open Command Prompt or PowerShell windows** for changes to take effect.
+
+**Once configured, you can use the command:**
+
+```bash
+# Analyze the current folder
+audio_analyzer
+
+# Analyze a specific folder
+audio_analyzer path/to/your/music/folder
+```
+
+For other operating systems, or if you prefer not to add to PATH:
 
 ```bash
 # Analyze the current folder
